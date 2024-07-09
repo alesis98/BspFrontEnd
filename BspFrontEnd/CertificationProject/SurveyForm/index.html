@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyForm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- -------------------------------- MAIN FORM--------------------------------- -->
+    <main>
+        <h1 id="title">Title Form</h1>
+        <p id="description">Description Formm</p>
+        <form action="" method="post" id="survey-form">
+            <!-- ------------------------ PERSONAL INFORMATION ------------------------- -->
+            <fieldset>
+                <legend>Personal information</legend>
+                <!-- ----------------------------- INPUT NAME ------------------------------ -->
+                <label for="name-label" id="name-label">
+                    Enter your first name:
+                    <input type="text" id="name" placeholder="Enter your first name" required><br/>
+                </label>
+                <!-- ----------------------------- INPUT EMAIL ----------------------------- -->
+                <label for="email-label" id="email-label">
+                    Enter your email address:
+                    <input type="email" id="email" placeholder="info@example.it" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                </label>
+                <!-- ---------------------------- INPUT NUMBER ----------------------------- -->
+                <label for="number-label" id="number-label">
+                    Enter a number between 0 and 100:
+                    <input type="number" id="number" min="0" max="100" placeholder="Enter a number" value="0">
+                </label>
+            </fieldset>
+
+            <!-- ----------------------------- PREFERENCES ----------------------------- -->
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="dropdown-list">what is your favourite programming language?</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="">Javascript</option>
+                    <option value="1">Python</option>
+                    <option value="2">Java</option>
+                </select>
+            </fieldset>
+
+            <!-- ----------------------------- EXPERIENCES ----------------------------- -->
+            <fieldset>
+                <label>Select the years of experience you have with this programming language:</label>
+                <div class="experiences">
+                    <div>
+                        <label for="-1">
+                            <input type="radio" id="-1" value="-1" name="experience" class="inline"/>
+                            -1
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="1-50">
+                            <input type="radio" id="1-5" value="1-5" name="experience" class="inline"/>
+                            1-5
+                        </label>
+                    </div>
+                    <div>
+                        <label for="5+">
+                            <input type="radio" id="5+" value="5+" name="experience" class="inline"/>
+                            5+
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- -------------------------- FRAMEWORK SECTION -------------------------- -->
+            <fieldset>
+                <label>Choose your favorite front-end framework</label>
+                <div class="experiences"></div>
+                    <div>
+                        <label for="React">
+                            <input type="checkbox" id="react"  class="inline" value="react" checked/>
+                            React
+                        </label>
+                    </div>
+
+                    <div>
+                    <label for="Angular">
+                        <input type="checkbox" id="angular" value="angular" class="inline"/>
+                        Angular
+                    </label>
+                    </div>
+                
+                    <div>
+                    <label for="Vue.js">
+                        <input type="checkbox" id="vue" value="vue"  class="inline"/>    
+                        Vue.js
+                    </label>
+                    </div>
+                </div>
+
+              </fieldset>
+
+              <!-- ------------------------------ TEXTAREA ------------------------------- -->
+              <fieldset>
+                  <label for="bio">Provide a bio:
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                  </label>
+              </fieldset>
+
+              <input id="submit" type="submit" value="Submit" class="submit-button"/>
+        </form>
+    </main>
+</body>
+</html>
